@@ -1,0 +1,12 @@
+[
+  {
+    "question": "B\u1ea3ng n\u00e0o l\u01b0u tr\u1eef th\u00f4ng tin v\u1ec1 b\u00e0i ki\u1ec3m tra trong m\u00f4-\u0111un thi?",
+    "options": [
+      "Test",
+      "ExamInfo",
+      "ExamScore",
+      "Transaction"
+    ],
+    "answer": "A"
+  }
+]

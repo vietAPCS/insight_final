@@ -1,0 +1,12 @@
+[
+  {
+    "question": "Which table stores the information about the test in the exam module?",
+    "options": [
+      "Test",
+      "ExamInfo",
+      "ExamScore",
+      "Transaction"
+    ],
+    "answer": "A"
+  }
+]
