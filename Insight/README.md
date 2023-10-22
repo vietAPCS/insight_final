@@ -1,10 +1,5 @@
 ## Installation
 
-### Clone the repository
-
-```
-$ git clone https://github.com/phanquocky/Insight.git
-```
 
 ### Install the required dependencies using pip:
 

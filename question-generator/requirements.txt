@@ -1,0 +1,9 @@
+## run: python app.py
+langchain
+torch
+transformers
+fitz
+frontend
+tools
+flask
+# Start-Process powershell  -ArgumentList  "cd client/insight; tenv/Scripts/activate; pip install -r requirements.txt; python manage.py runserver"
