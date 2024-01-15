@@ -4,9 +4,6 @@ const ContractController = require("./ContractController");
 const path = require('path');
 const { query } = require("express");
 const { parseQuery } = require("./utils");
-
-
-
 const USER_ADDRESS_FAKER = "0x301d50321d084e9457ec42E6723694EdA6A6eC55"
 const CourseController = {
     addCourse: async (req, res, next) => {
@@ -25,7 +22,7 @@ const CourseController = {
             uploader: "6506c1368982429b06b53346",//get userID from middleware
             description: req.body.description,
             price: req.body.price,
-            community:"6506c266e586a884adc78409"
+            community:"6506c266e586a884adc78409" // hard code ??
         });
 
         try {
@@ -43,12 +40,6 @@ const CourseController = {
             message: "successfully",
             course: newCourse
         });
-
-        //for read file
-
-        
-        // res.set('Content-Type', 'application/pdf');
-        // res.send(newCourse.content);  
     },
 
     getDetails: async (req, res, next) => {
@@ -89,7 +80,7 @@ const CourseController = {
         res.download(pdfPath, `${course.courseName}.pdf`);
     },
     async viewCoursePage(req, res, next){
-         let isValid = await ContractController.ownsNFTForCourse(USER_ADDRESS_FAKER,req.params.courseID)
+        let isValid = await ContractController.ownsNFTForCourse(USER_ADDRESS_FAKER,req.params.courseID)
         console.log(isValid)
         if(!isValid) {
             next('not own this course')

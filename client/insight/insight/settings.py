@@ -87,9 +87,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',        
         'NAME': 'insight_database',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'root',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '',
         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
    }
 }

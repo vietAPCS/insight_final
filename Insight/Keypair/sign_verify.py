@@ -47,7 +47,7 @@ def verify(message, signature, public_key):
 
 #test
 def main():
-    message = b"Hieu write something for Alice.."
+    message = b"Hieu write something for Alice"
     message_hash_hex = sha256_hash(message) 
     print("message_hash_hex:", message_hash_hex)
     message_hash = hex_string_to_bytes(message_hash_hex) #to bytes
@@ -60,7 +60,7 @@ def main():
 
     public_key = private_key.get_verifying_key()
     print("Public key:", public_key.to_string().hex())
-    is_verified = verify(hex_string_to_bytes(message_hash_hex), signature, public_key)
+    is_verified = verify(message_hash, signature, public_key)
     if is_verified:
         print("Signature verified successfully.")
     else:
